@@ -18,7 +18,7 @@ then
     fi
 fi
 
-content="$(eval $WERCKER_CREATE_FILE_CONTENT)"
+content="$(eval echo $WERCKER_CREATE_FILE_CONTENT)"
 echo -e "$content" > $WERCKER_CREATE_FILE_FILENAME
 if [ "$WERCKER_CREATE_FILE_HIDE_FROM_LOG" = "true" ]
 then
