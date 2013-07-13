@@ -18,7 +18,8 @@ then
     fi
 fi
 
-echo -e "$(eval $WERCKER_CREATE_FILE_CONTENT)" > $WERCKER_CREATE_FILE_FILENAME
+content="$(eval $WERCKER_CREATE_FILE_CONTENT)"
+echo -e "$content" > $WERCKER_CREATE_FILE_FILENAME
 if [ "$WERCKER_CREATE_FILE_HIDE_FROM_LOG" = "true" ]
 then
     debug "$(cat $WERCKER_CREATE_FILE_FILENAME)"
