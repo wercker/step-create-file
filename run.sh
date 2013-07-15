@@ -5,7 +5,7 @@ fi
 
 if [ -z "$WERCKER_CREATE_FILE_CONTENT" ]
 then
-    fail 'missing content option, will create an empty file.'
+    warning 'missing content option, will create an empty file.'
 fi
 
 if [ -e "$WERCKER_CREATE_FILE_FILENAME" ]
