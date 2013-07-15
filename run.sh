@@ -19,7 +19,7 @@ then
 fi
 
 echo -e "$WERCKER_CREATE_FILE_CONTENT" > "$WERCKER_CREATE_FILE_FILENAME"
-if [ "$WERCKER_CREATE_FILE_HIDE_FROM_LOG" -ne "true" ]
+if [[ "$WERCKER_CREATE_FILE_HIDE_FROM_LOG" != "true" ]]
 then
     debug "$(cat $WERCKER_CREATE_FILE_FILENAME)"
 fi
