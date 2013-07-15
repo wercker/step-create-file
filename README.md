@@ -6,8 +6,8 @@ to `true`.
 
 ## Options
 
-* `filename` - This is the path to the file. This option is required and the
-  step will fail when missing. You can use `$WERCKER_ROOT` to get the root
+* `filename` - This option is required and the step will fail when missing. It specifies the path to the file and 
+  can be a full or relative path (from `$WERCKER_SOURCE_DIR`). You can use `$WERCKER_ROOT` to get the root
   directory of the current pipeline context.
 * `content` - The content that will be written to the file.
 * `overwrite` - Set to "true" if this step should overwrite a file when it already
@@ -19,7 +19,8 @@ to `true`.
 
     - create-file:
         name: Create robots.txt
-        filename: $WERCKER_ROOT/robots.txt
+        filename: robots.txt
+        overwrite: true
         content: |-
             # Allow everything except drafts
             User-agent: *
