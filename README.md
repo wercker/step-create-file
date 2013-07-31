@@ -6,10 +6,13 @@ to `true`.
 
 ## Options
 
+### required
 * `filename` - This option is required and the step will fail when missing. It specifies the path to the file and 
   can be a full or relative path (from `$WERCKER_SOURCE_DIR`). You can use `$WERCKER_ROOT` to get the root
   directory of the current pipeline context.
 * `content` - The content that will be written to the file.
+
+### optional
 * `overwrite` - Set to "true" if this step should overwrite a file when it already
   exists. When this option is not set, or set to any other value the step fails
   when the file already exists.
