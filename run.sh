@@ -10,7 +10,7 @@ fi
 
 if [ -e "$WERCKER_CREATE_FILE_FILENAME" ]
 then
-    if [[ ! -e "$WERCKER_CREATE_FILE_OVERWRITE" && "$WERCKER_CREATE_FILE_OVERWRITE" = "true" ]]
+    if [[ -n "$WERCKER_CREATE_FILE_OVERWRITE" && "$WERCKER_CREATE_FILE_OVERWRITE" = "true" ]]
     then
         debug "file \"$WERCKER_CREATE_FILE_FILENAME\" already exists and will be overwritten because overwrite option is set to true"
     else
